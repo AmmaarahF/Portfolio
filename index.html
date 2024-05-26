@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+@font-face {
+    font-family: "Custom";
+    src: url(fonts/custom.otf);
+}
+@font-face {
+    font-family: "Custom2";
+    src: url(fonts/Minecrafter.Alt.ttf);
+}
+@font-face {
+    font-family: "Custom3";
+    src: url(fonts/Pixel\ Digivolve.otf);
+}
+@font-face {
+    font-family: "Custom4";
+    src: url(fonts/Pixel\ Digivolve\ Italic.otf);
+}
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; 
+    scroll-behavior: smooth;
+}
+.navbar {
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+.navbar-brand img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.search-bar {
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    max-width: 300px;
+    margin-left: 20px;
+}
+.find-phrase {
+    padding-left: 15px;
+    margin-left: 15px;
+    font-size: 30px;
+    color: #fff;
+    font-family: "Custom4";
+}
+.hamburger-menu {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.hamburger-content {
+    display: none;
+    flex-direction: column;
+    background-color: #2B2B2B;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    border: 1px solid #555;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1000;
+}
+.hamburger-content a,
+.hamburger-content input,
+.hamburger-content button {
+    color: #fff;
+    padding: 10px;
+    border: none;
+    background: none;
+    text-align: left;
+    width: 100%;
+}
+.hamburger-content input {
+    border-bottom: 1px solid #555;
+}
+.hamburger-content button {
+    border-top: 1px solid #555;
+}
+.hamburger-content a {
+    text-decoration: none;
+}
+.hamburger-menu.open .hamburger-content {
+    display: flex;
+}
+.sub-navbar {
+    background-color: #325078;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+}
+.sub-navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 15px;
+    font-family: "Custom4";
+}
+.section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#section1 {
+    position: relative;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90vh;
+}
+#section1 .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.form-container {
+    max-width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.description {
+    max-width: 300px;
+    margin-left: 20px;
+}
+.sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    text-align: center;
+    box-sizing: border-box;
+    padding-bottom: 30px;
+}
+.me_pic{
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0%;
+    width: 600px;
+    height:400px;
+}
+.name {
+    font-family: 'Custom3';
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000000;
+    margin: 10px 0;
+}
+
+.left_name {
+    font-size: 1rem;
+    font-weight: bold;
+    padding-top: -20px;
+}
+.ed_name {
+    font-family: 'Custom3';
+    font-size: 1.5rem;
+    color: #000000;
+    margin: 10px 0;
+}
+.sub {
+    font-family: 'Custom3';
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000000;
+}
+.ed_sub {
+    font-family: 'Custom3';
+    font-size: 1.5rem;
+    color: #000000;
+}
+.x_ {
+    text-align: center;
+}
+h1, h2 {
+    text-align: center;
+    font-family: "Custom4";
+    color: white;
+}
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #325078;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#section2 {
+    background-color: #325078;  
+    padding-bottom: 20px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.icon-container {
+    display:flex;
+    padding-bottom: 35px;
+    padding-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.sec-icon-container{
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+    gap:3rem;
+}
+.sec-icon-container .icon-box:not(:first-child){
+    margin-left: -60px;
+    
+}
+/*.icon-box {
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 250px;
+    box-sizing: border-box;
+    text-align: center;
+}*/
+.icon-box img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+    align-self: center;
+}
+.icon-box{
+    position: relative;
+    left: 0px;
+    width: 180px;
+    height: 200px;
+    background-color: white;
+    border-radius: 45px;
+    border: 3px solid black;
+    padding: 20px;
+}
+.icon-box:not(:first-child){
+    margin-left: -60px;
+}
+.icon-box:hover{
+    transform: translateY(-20px);
+}
+.icon-box:hover ~ .icon-box{
+    left: 50px;
+}
+#section3 {
+    background-color: #000;
+    padding-top: 20px;
+    border-radius: 0;
+}
+.card {
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: calc(33% - 20px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 1s;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+.card a {
+    text-decoration: none;
+    color: #325078;
+    font-weight: bold;
+    margin-top: 10px;
+}
+button {
+    font-size: 18px;
+    color: #e1e1e1;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+  
+button:focus,
+button:hover {
+    color: #fff;
+}
+  
+button:focus:after,
+button:hover:after {
+    width: 100%;
+    left: 0%;
+}
+  
+button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+.hamburger-content h1 {
+    
+}
+.card-container{
+    display:flex;
+    height: 12rem;
+    gap: 20px;
+}
+.card-container > div{
+    flex: 1;
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+}
+.card-container > div:hover{
+    flex: 6;
+}
+@media(max-width: 1370px) {
+    .navbar-brand img {
+        width: 50px;
+        height: 50px;
+    }
+    .find-phrase {
+        font-size: 16px;
+        padding-left: 10px;
+        margin-left: 10px;
+    }
+    .sec {
+        height: auto;
+        padding: 20px 0;
+    }
+    .me_pic {
+        height: 200px;
+        width: 200px;
+    }
+    .ed_name {
+        font-size: 1.2rem;
+    }
+    .ed_sub {
+        font-size: 1rem;
+    }
+    .card {
+        width: calc(100% - 20px);
+    }
+    .icon-box {
+        width: 9rem;
+        height: 11rem;
+    }
+    .icon-box p{
+        font-size: 9pt;
+    }
+    .card-container{
+        display: flex;
+    }
+   
+}
+</style>
+<body>
+    <div class="navbar">
+        <div class="navbar-brand">
+            <img src="images/AF.png" alt="">
+            <span class="find-phrase">My Portfolio</span>
+        </div>
+        <div class="hamburger-menu">
+            &#9776;
+            <div class="hamburger-content">
+                <h1></h1>
+                <a href="#">Education</a>
+                <a href="#">Skills</a>
+                <a href="#">Projects</a>
+                <a href="#">Contact Me</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="sub-navbar">
+        <a href="#">Education</a> 
+        <a href="#section2">Skills</a>
+        <a href="#section3">Projects</a>
+        <a href="#">Contact Me</a>
+    </div>
+
+    <div class="sec" id="section1">
+       
+        <img class="me_pic" src="images/MagicEraser_240526_004230.PNG" alt="">
+       
+    </div>
+
+    <div class="section" id="section2">
+        <h1>Skills</h1>
+        <div class="icon-container">
+            <div class="icon-box">
+                <img src="images/html5-line-icon.png" alt="HTML Icon">
+                <h3>HTML</h3>
+                <p>Experienced in HTML5 for building the structure of web pages.</p>
+            </div>
+            <div class="icon-box">
+                <img src="images/css-file-icon.png" alt="CSS Icon">
+                <h3>CSS</h3>
+                <p>Skilled in CSS3 for styling and creating responsive web designs.</p>
+            </div>
+            <div class="icon-box">
+                <img src="images/js-file-icon.png" alt="JavaScript Icon">
+                <h3>JavaScript</h3>
+                <p>Proficient in JavaScript for adding interactivity to web pages.</p>
+            </div>
+            <div class="icon-box">
+                <img src="images/c.455x512.png" alt="C# Icon">
+                <h3>C#</h3>
+                <p>Knowledgeable in C# for developing Windows applications.</p>
+            </div>
+            <div class="icon-box">
+                <img src="images/java.png" alt="Java Icon">
+                <h3>Java</h3>
+                <p>Experienced in Java for building cross-platform applications.</p>
+            </div>
+        </div>
+        <div class="sec-icon-container">
+            <div class="icon-box">
+                <img src="images/kotlin.512x512.png" alt="Kotlin Icon">
+                <h3>Kotlin</h3>
+                <p>Proficient in Kotlin for Android app development.</p>
+            </div>
+            <div class="icon-box">
+                <img src="images/logo-python.506x512.png" alt="Python Icon">
+                <h3>Python</h3>
+                <p>Experienced in Python for scripting and data analysis.</p>
+            </div>
+            <div class="icon-box">
+                <img src="images/react.512x449.png" alt="React.js Icon">
+                <h3>React.js</h3>
+                <p>Skilled in React.js for building modern, dynamic web applications.</p>
+            </div>
+            <div class="icon-box">
+                <img src="images/node-js-black-icon.png" alt="Node.js Icon">
+                <h3>Node.js</h3>
+                <p>Knowledgeable in Node.js for server-side scripting.</p>
+            </div>
+            <div class="icon-box">
+                <img src="images/aspnet-svgrepo-com.png" alt="Asp.net Icon" style="height: 50px; width: 50px;">
+                <h3>Asp.Net</h3>
+                <p>Some experience in Asp.Net as a framework for building web apps and services with .NET and C#.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="section3">
+        <div class="container">
+            <h1>Projects</h1>
+            <div class="card-container">
+                <div class="card" style="background-image: url(images/ice-cream.png);">
+                    <div>
+                        <h3>Swirl Bliss</h3>
+                        <a href="https://swirlbliss.netlify.app/" target="_blank">View Project</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/business-finance-icon.png" alt="Business & Finance Icon">
+                    <div>
+                        <h3>Business & Finance</h3>
+                        <a href="https://example.com/business-finance" target="_blank">View Project</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/web-development-icon.png" alt="Web Development Icon">
+                    <div>
+                        <h3>Web Development</h3>
+                        <a href="https://example.com/web-development" target="_blank">View Project</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/graphic-design-icon.png" alt="Graphic Design Icon">
+                    <div>
+                        <h3>Graphic Design</h3>
+                        <a href="https://example.com/graphic-design" target="_blank">View Project</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/video-editing-icon.png" alt="Video Editing Icon">
+                    <div>
+                        <h3>Video Editing</h3>
+                        <a href="https://example.com/video-editing" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
