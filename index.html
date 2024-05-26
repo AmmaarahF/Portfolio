@@ -23,6 +23,42 @@
     font-family: "Custom4";
     src: url(fonts/Pixel\ Digivolve\ Italic.otf);
 }
+@font-face {
+    font-family: "Custom5";
+    src: url(fonts/Chomiku3D-Regular.ttf);
+}
+@font-face {
+    font-family: "Custom6";
+    src: url(fonts/WoresPaint.otf);
+}
+@font-face {
+    font-family: 'Custom7';
+    src: url(fonts/Helios\ Retro\ -Regular.ttf);
+}
+@font-face {
+    font-family: 'Custom8';
+    src: url(fonts/MADE\ Canvas\ Black\ PERSONAL\ USE.otf);
+}
+@font-face {
+    font-family: 'Custom9';
+    src: url(fonts/Neothic.ttf);
+}
+@font-face {
+    font-family: 'Custom10';
+    src: url(fonts/Roadblock-Regular.ttf);
+}
+@font-face {
+    font-family: 'Custom11';
+    src: url(fonts/Daydream.ttf);
+}
+@font-face {
+    font-family: 'Custom12';
+    src: url(fonts/Super-Mario-Bros--3.ttf);
+}
+@font-face {
+    font-family: 'Custom13';
+    src: url(fonts/m12.TTF);
+}
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
@@ -157,14 +193,37 @@ html, body {
     box-sizing: border-box;
     padding-bottom: 30px;
 }
+.me_greeting {
+    font-family: 'Custom3';
+    position: absolute;
+    top: 0;
+    font-size: 15pt;
+    text-align: center;
+  
+}
+
+.soft_name {
+    font-size: 8rem;
+    font-family: 'Custom13';
+    text-align: center;
+    -webkit-text-stroke: 3px black;
+    margin-top: 50px;
+}
+.dev_name{
+    font-size: 9rem;
+    font-family: 'Custom13';
+    text-align: center;
+    color: #fff;
+    -webkit-text-stroke: 4px black;
+}
 .me_pic{
     position: absolute;
-    bottom: -10px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 0%;
-    width: 600px;
-    height:400px;
+    width: 650px;
+    height:450px;
 }
 .name {
     font-family: 'Custom3';
@@ -299,7 +358,7 @@ input[type="submit"] {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 1s;
+    transition: transform 2s;
 }
 
 .card h3 {
@@ -355,7 +414,7 @@ button:after {
 }
 .card-container{
     display:flex;
-    height: 12rem;
+    height: 15rem;
     gap: 20px;
 }
 .card-container > div{
@@ -415,16 +474,6 @@ button:after {
             <img src="images/AF.png" alt="">
             <span class="find-phrase">My Portfolio</span>
         </div>
-        <div class="hamburger-menu">
-            &#9776;
-            <div class="hamburger-content">
-                <h1></h1>
-                <a href="#">Education</a>
-                <a href="#">Skills</a>
-                <a href="#">Projects</a>
-                <a href="#">Contact Me</a>
-            </div>
-        </div>
     </div>
 
     <div class="sub-navbar">
@@ -435,10 +484,13 @@ button:after {
     </div>
 
     <div class="sec" id="section1">
-       
-        <img class="me_pic" src="images/MagicEraser_240526_004230.PNG" alt="">
-       
+        <p class="me_greeting">Hello !, My name is Ammaarah and I'm a<br><br>
+            <span class="soft_name">Software</span><br><br>
+            <span class="dev_name">Developer</span>
+        </p>
+        <img class="me_pic" src="images/mepic.PNG" alt="">
     </div>
+    
 
     <div class="section" id="section2">
         <h1>Skills</h1>
@@ -508,34 +560,25 @@ button:after {
                         <a href="https://swirlbliss.netlify.app/" target="_blank">View Project</a>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="images/business-finance-icon.png" alt="Business & Finance Icon">
+                <div class="card" style="background-image: url(images/ice-cream.png);">
                     <div>
-                        <h3>Business & Finance</h3>
-                        <a href="https://example.com/business-finance" target="_blank">View Project</a>
+                        <h3>Swirl Bliss</h3>
+                        <a href="https://swirlbliss.netlify.app/" target="_blank">View Project</a>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="images/web-development-icon.png" alt="Web Development Icon">
+                <div class="card" style="background-image: url(images/ice-cream.png);">
                     <div>
-                        <h3>Web Development</h3>
-                        <a href="https://example.com/web-development" target="_blank">View Project</a>
+                        <h3>Swirl Bliss</h3>
+                        <a href="https://swirlbliss.netlify.app/" target="_blank">View Project</a>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="images/graphic-design-icon.png" alt="Graphic Design Icon">
+                <div class="card" style="background-image: url(images/ice-cream.png);">
                     <div>
-                        <h3>Graphic Design</h3>
-                        <a href="https://example.com/graphic-design" target="_blank">View Project</a>
+                        <h3>Swirl Bliss</h3>
+                        <a href="https://swirlbliss.netlify.app/" target="_blank">View Project</a>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="images/video-editing-icon.png" alt="Video Editing Icon">
-                    <div>
-                        <h3>Video Editing</h3>
-                        <a href="https://example.com/video-editing" target="_blank">View Project</a>
-                    </div>
-                </div>
+               
             </div>
         </div>
     </div>
