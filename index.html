@@ -85,59 +85,6 @@ html, body {
     height: 80px;
     margin-right: 10px;
 }
-.search-bar {
-    padding: 8px;
-    border-radius: 20px;
-    border: none;
-    max-width: 300px;
-    margin-left: 20px;
-}
-.find-phrase {
-    padding-left: 15px;
-    margin-left: 15px;
-    font-size: 30px;
-    color: #fff;
-    font-family: "Custom4";
-}
-.hamburger-menu {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-.hamburger-content {
-    display: none;
-    flex-direction: column;
-    background-color: #2B2B2B;
-    position: absolute;
-    top: 50px;
-    right: 20px;
-    border: 1px solid #555;
-    border-radius: 10px;
-    overflow: hidden;
-    z-index: 1000;
-}
-.hamburger-content a,
-.hamburger-content input,
-.hamburger-content button {
-    color: #fff;
-    padding: 10px;
-    border: none;
-    background: none;
-    text-align: left;
-    width: 100%;
-}
-.hamburger-content input {
-    border-bottom: 1px solid #555;
-}
-.hamburger-content button {
-    border-top: 1px solid #555;
-}
-.hamburger-content a {
-    text-decoration: none;
-}
-.hamburger-menu.open .hamburger-content {
-    display: flex;
-}
 .sub-navbar {
     background-color: #325078;
     display: flex;
@@ -261,10 +208,10 @@ html, body {
     text-align: center;
 }
 h1, h2 {
-    align-self: center;
     top:0;
     font-family: "Custom4";
     color: white;
+    text-shadow: 0 5px 5px #000000;
 }
 input[type="text"], input[type="email"] {
     width: 100%;
@@ -282,14 +229,49 @@ input[type="submit"] {
     cursor: pointer;
     border-radius: 5px;
 }
-#section2 {
-    background-color: #325078;  
-    padding-bottom: 20px;
-    padding-top: 20px;
+.section #section2{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
+}
+#section2 h4{
+    color: #ffffff;
+    text-align: center;
+    align-self: center;
+    top:0;
+    font-family: "Custom4";
+    text-shadow: 0 5px 15px white;
+}
+#section2 .skills-container{
+    text-align: center;
+    width: 100%;
+}
+#section2 .skills-container h1{
+    text-align: center;
+    padding-right: 180px;
+}
+#section2 .content{
     justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Custom4';
+}
+#section2 .edu{
+    padding-right: 50px;
+    padding-left: 15px;
+}
+#section2 .content h5, h6{
+    letter-spacing: 1px;
+}
+.box{
+    padding:10px;
+    margin-bottom: 15px;
+    border-left: 3px solid white;
+    padding-left: 15px;
+    margin-left: 15px;
+}
+.skill-edu{
+    display: flex;
+    
 }
 .icon-container {
     display:flex;
@@ -297,28 +279,37 @@ input[type="submit"] {
     padding-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
+   
 }
 .sec-icon-container{
-    display: flex;
+    display:flex;
+    padding-bottom: 35px;
+    padding-top: 50px;
     margin-left: 50px;
     margin-right: 50px;
-    gap:3rem;
+    
+}
+.education-container{
+    width: 600px;
+    box-shadow: 10px 10px 10px 10px #fff;
+    border-radius: 20px;
 }
 .sec-icon-container .icon-box:not(:first-child){
     margin-left: -60px;
     
 }
-/*.icon-box {
-    background-color: #fff;
-    color: #000;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 10px;
+.sec-icon-container .icon-box{
+    position: relative;
+    left: 0px;
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    border-radius: 50%;
+    border: 3px solid black;
     padding: 20px;
-    width: 250px;
-    box-sizing: border-box;
     text-align: center;
-}*/
+    box-shadow: 10px 10px 10px #000000;
+}
 .icon-box img {
     width: 40px;
     height: 40px;
@@ -328,12 +319,14 @@ input[type="submit"] {
 .icon-box{
     position: relative;
     left: 0px;
-    width: 180px;
-    height: 200px;
+    width: 90px;
+    height: 90px;
     background-color: white;
-    border-radius: 45px;
+    border-radius: 50%;
     border: 3px solid black;
     padding: 20px;
+    text-align: center;
+    box-shadow: 10px 10px 10px #000000;
 }
 .icon-box:not(:first-child){
     margin-left: -60px;
@@ -373,50 +366,30 @@ input[type="submit"] {
     font-weight: bold;
     margin-top: 10px;
 }
-button {
-    font-size: 18px;
-    color: #e1e1e1;
-    font-family: inherit;
-    font-weight: 800;
-    cursor: pointer;
-    position: relative;
-    border: none;
-    background: none;
-    text-transform: uppercase;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: color;
-}
-  
-button:focus,
-button:hover {
-    color: #fff;
-}
-  
-button:focus:after,
-button:hover:after {
-    width: 100%;
-    left: 0%;
-}
-  
-button:after {
-    content: "";
-    pointer-events: none;
-    bottom: -2px;
-    left: 50%;
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background-color: #fff;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: width, left;
-}
 #section3 .container{
-    width: 800px;
+    width: 870px;
+    border: 3px solid white;
+    border-radius: 20px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 150px;
+    box-shadow: 20px 15px 15px 10px #325078;
 }
 #section3 .container h1{
     margin-bottom: 120px;
+    text-shadow: 0px 5px 5px white;
+}
+#section3 .container h3{
+    color: #000;
+    font-size: 10pt;
+}
+#section3 .container .card{
+    width: 500px;
+}
+#section3 .container a{
+    width: 20px;
+    font-family: 'Custom3';
+   
 }
 .card-container{
     display:flex;
@@ -434,15 +407,36 @@ button:after {
 .card-container > div:hover{
     flex: 6;
 }
+.fourth-container{
+    width: 350px;
+    border: 4px solid black;
+    border-radius: 12px;
+    box-shadow: 10px 10px 10px 10px #325078;
+    font-family: 'Custom3';
+    padding-left:10px;
+    padding-bottom: 100px;;
+}
+input[type="text"],
+input[type="email"], 
+textarea{
+    width: 250px;
+    padding-left:10px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+#section4 button{
+    display: flex;
+    left: 130px;
+    right:80px;
+    text-align: center;
+    padding-top: 15px;
+    color: #000000;
+    text-decoration: none;
+}
 @media(max-width: 1370px) {
     .navbar-brand img {
         width: 50px;
         height: 50px;
-    }
-    .find-phrase {
-        font-size: 16px;
-        padding-left: 10px;
-        margin-left: 10px;
     }
     .sec {
         height: auto;
@@ -471,7 +465,13 @@ button:after {
     .card-container{
         display: flex;
     }
-   
+    .sec-icon-container .icon-box{
+        width: 9rem;
+        height: 11rem;
+    }
+    .sec-icon-container .icon-box p{
+        font-size: 9pt;
+    }
 }
 </style>
 <body>
@@ -486,9 +486,11 @@ button:after {
         <a href="#">Education</a> 
         <a href="#section2">Skills</a>
         <a href="#section3">Projects</a>
-        <a href="#">Contact Me</a>
+        <a href="#section4">Contact Me</a>
     </div>
 
+
+    
     <div class="sec" id="section1">
         <p class="me_greeting">Hello !, My name is Ammaarah and I'm a<br><br>
             <span class="soft_name">Software</span><br><br>
@@ -499,60 +501,77 @@ button:after {
     
 
     <div class="section" id="section2">
-        <h1>Skills</h1>
-        <div class="icon-container">
-            <div class="icon-box">
-                <img src="images/html5-line-icon.png" alt="HTML Icon">
-                <h3>HTML</h3>
-                <p>Experienced in HTML5 for building the structure of web pages.</p>
-            </div>
-            <div class="icon-box">
-                <img src="images/css-file-icon.png" alt="CSS Icon">
-                <h3>CSS</h3>
-                <p>Skilled in CSS3 for styling and creating responsive web designs.</p>
-            </div>
-            <div class="icon-box">
-                <img src="images/js-file-icon.png" alt="JavaScript Icon">
-                <h3>JavaScript</h3>
-                <p>Proficient in JavaScript for adding interactivity to web pages.</p>
-            </div>
-            <div class="icon-box">
-                <img src="images/c.455x512.png" alt="C# Icon">
-                <h3>C#</h3>
-                <p>Knowledgeable in C# for developing Windows applications.</p>
-            </div>
-            <div class="icon-box">
-                <img src="images/java.png" alt="Java Icon">
-                <h3>Java</h3>
-                <p>Experienced in Java for building cross-platform applications.</p>
-            </div>
-        </div>
-        <div class="sec-icon-container">
-            <div class="icon-box">
-                <img src="images/kotlin.512x512.png" alt="Kotlin Icon">
-                <h3>Kotlin</h3>
-                <p>Proficient in Kotlin for Android app development.</p>
-            </div>
-            <div class="icon-box">
-                <img src="images/logo-python.506x512.png" alt="Python Icon">
-                <h3>Python</h3>
-                <p>Experienced in Python for scripting and data analysis.</p>
-            </div>
-            <div class="icon-box">
-                <img src="images/react.512x449.png" alt="React.js Icon">
-                <h3>React.js</h3>
-                <p>Skilled in React.js for building modern, dynamic web applications.</p>
-            </div>
-            <div class="icon-box">
-                <img src="images/node-js-black-icon.png" alt="Node.js Icon">
-                <h3>Node.js</h3>
-                <p>Knowledgeable in Node.js for server-side scripting.</p>
-            </div>
-            <div class="icon-box">
-                <img src="images/aspnet-svgrepo-com.png" alt="Asp.net Icon" style="height: 50px; width: 50px;">
-                <h3>Asp.Net</h3>
-                <p>Some experience in Asp.Net as a framework for building web apps and services with .NET and C#.</p>
-            </div>
+        <div class="skill-edu">
+            <div class="skills-container">
+                     <h1>XP</h1>
+
+                <div class="icon-container">
+                  <div class="icon-box">
+                    <img src="images/html5-line-icon.png" alt="HTML Icon">
+                    <h3>HTML</h3>
+                  </div>
+                  <div class="icon-box">
+                    <img src="images/css-file-icon.png" alt="CSS Icon">
+                    <h3>CSS</h3>
+                  </div>
+                  <div class="icon-box">
+                    <img src="images/js-file-icon.png" alt="JavaScript Icon">
+                    <h3>JavaScript</h3>
+                  </div>
+                  <div class="icon-box">
+                    <img src="images/c.455x512.png" alt="C# Icon">
+                    <h3>C#</h3>
+                  </div>
+                  <div class="icon-box">
+                    <img src="images/java.png" alt="Java Icon">
+                    <h3>Java</h3>
+                  </div>
+                </div>
+
+               <div class="sec-icon-container">
+                  <div class="icon-box">
+                      <img src="images/kotlin.512x512.png" alt="Kotlin Icon">
+                      <h3>Kotlin</h3>
+                  </div>
+                  <div class="icon-box">
+                     <img src="images/logo-python.506x512.png" alt="Python Icon">
+                     <h3>Python</h3>
+                  </div>
+                  <div class="icon-box">
+                     <img src="images/react.512x449.png" alt="React.js Icon">
+                     <h3>React.js</h3>
+                  </div>
+                  <div class="icon-box">
+                     <img src="images/node-js-black-icon.png" alt="Node.js Icon">
+                     <h3>Node.js</h3>
+                  </div>
+                  <div class="icon-box">
+                     <img src="images/aspnet-svgrepo-com.png" alt="Asp.net Icon" style="height: 50px; width: 50px;">
+                     <h3>Asp.Net</h3>
+                  </div>
+               </div>
+            </div>  
+              <div class="education-container" style="border: 3px solid #000000;">
+                <h4>Education</h4>
+                <div class="content">
+                    <div class="box">
+                        <h6>2015-2019</h6>
+                        <h5>Matric Certificate</h5>
+                        <p>Harold Cressy High School</p>
+                    </div>
+                    <div class="box">
+                        <h6>2021-2023</h6>
+                        <h5>Diploma in Software Development</h5>
+                        <p>Rosebank College</p>
+                    </div>
+                    <div class="box">
+                        <h6>2024-present</h6>
+                        <h5>Junior Software Developer Training</h5>
+                        <p>CapaCiti</p>
+                    </div>
+                </div>
+              </div>
+            
         </div>
     </div>
 
@@ -560,25 +579,23 @@ button:after {
         <div class="container">
             <h1>Projects</h1>
             <div class="card-container">
-                <div class="card" style="background-image: url(images/ice-cream.png);">
+                <div class="card" style="background-image: url(images/ice.png);">
                     <div>
-                        <h3>Swirl Bliss</h3>
-                        <a href="https://swirlbliss.netlify.app/" target="_blank">View Project</a>
+                        <a href="https://swirlbliss.netlify.app/" target="_blank"><u><h3>Swirl Bliss</h3></u></a>
                     </div>
                 </div>
-                <div class="card" style="background-image: url(images/Loading\ Bar\ GIF\ -\ Loading\ Bar\ Wait\ -\ Discover\ &\ Share\ GIFs.gif);">
+                <div class="card" style="background-image: url(images/Screenshot\ 2024-05-27\ 145021.png);">
                     <div>
-                        <h3 style="color: #ffffff;">Coming soon...</h3>
-                       
+                        <a href="https://lets-get-braided1-git-main-leelulibos-projects.vercel.app/" target="_blank"><u><h3 style="color: black;">Let's Get Braided</h3></a></u>
                     </div>
                 </div>
-                <div class="card" style="background-image: url(images/Loading\ Bar\ GIF\ -\ Loading\ Bar\ Wait\ -\ Discover\ &\ Share\ GIFs.gif);">
+                <div class="card" style="background-image: url(images/Loading\ XXI.gif);">
                     <div>
                         <h3 style="color: #ffffff;">Coming soon...</h3>
                      
                     </div>
                 </div>
-                <div class="card" style="background-image: url(images/Loading\ Bar\ GIF\ -\ Loading\ Bar\ Wait\ -\ Discover\ &\ Share\ GIFs.gif);">
+                <div class="card" style="background-image: url(images/Loading\ XXI.gif);">
                     <div>
                         <h3 style="color: #ffffff;">Coming soon...</h3>
                        
@@ -591,8 +608,24 @@ button:after {
 
     <div class="section" id="section4">
         <div class="fourth-container">
-            <h1 style="color: #000;">Education</h1>
-            
+            <h1 style="color: #000;">Contact me</h1>
+             <form action="/submit" method="post">
+                <div class="form-group">
+                    <label for="name">Name :</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" style="width: 200px;"></textarea>
+                </div>
+                
+                    <button type="submit">Submit</button>
+               
+             </form>
         </div>
     </div>
 </body>
