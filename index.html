@@ -433,7 +433,7 @@ textarea{
     color: #000000;
     text-decoration: none;
 }
-@media(max-width: 1370px) {
+@media(min-width: 607px) and (max-width: 1366px) {
     .navbar-brand img {
         width: 50px;
         height: 50px;
@@ -442,9 +442,25 @@ textarea{
         height: auto;
         padding: 20px 0;
     }
+    .soft_name{
+        font-size: 7rem;
+        height: 200px;;
+        font-family: 'Custom13';
+        text-align: center;
+        -webkit-text-stroke: 3px black;
+        margin-top: 50px;
+    }
+    .dev_name{
+        font-size: 7rem;
+        height:35px;
+        font-family: 'Custom13';
+        text-align: center;
+        color: #fff;
+        -webkit-text-stroke: 4px black;
+    }
     .me_pic {
-        height: 200px;
-        width: 200px;
+        height: 350px;
+        width: 450px;
     }
     .ed_name {
         font-size: 1.2rem;
@@ -455,23 +471,69 @@ textarea{
     .card {
         width: calc(100% - 20px);
     }
-    .icon-box {
-        width: 9rem;
-        height: 11rem;
-    }
+    .section #section2{
+    display: flex;
+    width: 100%;
+}
+    .icon-box{
+    position: relative;
+    left: 0px;
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    border-radius: 50%;
+    border: 3px solid black;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 10px 10px 10px #000000;
+   }
+
     .icon-box p{
         font-size: 9pt;
+        text-align: center;
+        align-items: center;
     }
     .card-container{
         display: flex;
     }
+    .sec-icon-container{
+    display:flex;
+    padding-bottom: 35px;
+    padding-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    
+   }
     .sec-icon-container .icon-box{
-        width: 9rem;
-        height: 11rem;
+    left: 0px;
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    border-radius: 50%;
+    border: 3px solid black;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 10px 10px 10px #000000;
     }
     .sec-icon-container .icon-box p{
         font-size: 9pt;
+        text-align: center;
     }
+    .icon-container {
+    display:flex;
+    text-align: center;
+    }
+    .skill-edu{
+    display: flex;
+    width: 100%;
+}
+    .education-container{
+    width: 600px;
+    box-shadow: 10px 10px 10px 10px #fff;
+    border-radius: 20px;
+    margin-right: 50px;
+}
+
 }
 </style>
 <body>
