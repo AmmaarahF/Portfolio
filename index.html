@@ -609,7 +609,9 @@ textarea{
     <div class="section" id="section4">
         <div class="fourth-container">
             <h1 style="color: #000;">Contact me</h1>
-             <form action="/submit" method="post">
+
+             <form onSubmit={onSubmit} method="POST" id="form">
+                <input type="hidden" name="access_key" value="7b1a3638-f525-49fa-a359-9d707649575a">
                 <div class="form-group">
                     <label for="name">Name :</label>
                     <input type="text" id="name" name="name" required>
@@ -624,9 +626,53 @@ textarea{
                 </div>
                 
                     <button type="submit">Submit</button>
-               
+        
              </form>
         </div>
     </div>
+
+    <script>
+        const form = document.getElementById('form');
+       
+
+        form.addEventListener('submit', function(e){
+            const formData = new FormData(form);
+            e.preventDefault();
+
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+        
+
+            fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                result.innerHTML = json.message;
+            } else {
+                console.log(response);
+                result.innerHTML = json.message;
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            result.innerHTML = "Something went wrong!";
+        })
+        .then(function() {
+            form.reset();
+            setTimeout(() => {
+                result.style.display = "none";
+            }, 3000);
+        });
+});
+        
+    </script>
 </body>
 </html>
