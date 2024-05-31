@@ -694,7 +694,7 @@ textarea{
         <div class="fourth-container">
             <h1 style="color: #000;">Contact me</h1>
 
-             <form onSubmit={onSubmit} method="POST" id="form">
+             <form method="POST" id="form">
                 <input type="hidden" name="access_key" value="7b1a3638-f525-49fa-a359-9d707649575a">
                 <div class="form-group">
                     <label for="name">Name :</label>
@@ -710,25 +710,26 @@ textarea{
                 </div>
                 
                     <button type="submit">Submit</button>
-        
+                    <div id="result"></div>
              </form>
         </div>
     </div>
 
     <script>
-        const form = document.getElementById('form');
-       
+      
+const form = document.getElementById('form');
+const result = document.getElementById('result');
 
-        form.addEventListener('submit', function(e){
-            const formData = new FormData(form);
-            e.preventDefault();
+form.addEventListener('submit', function(e) {
+    const formData = new FormData(form);
+    e.preventDefault();
 
-            const object = Object.fromEntries(formData);
-            const json = JSON.stringify(object);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
 
-        
+    result.innerHTML = "Please wait..."
 
-            fetch('https://api.web3forms.com/submit', {
+    fetch('https://api.web3forms.com/submit', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -756,6 +757,7 @@ textarea{
             }, 3000);
         });
 });
+</script>
         
     </script>
 </body>
