@@ -437,21 +437,6 @@ textarea{
     color: #000000;
     text-decoration: none;
 }
-@media(max-width:425px){
-     .soft_name{
-        font-size: 3.6rem;
-        padding-top: 20px;
-        letter-spacing: 1px;
-        
-    }
-    .dev_name{
-        margin-top: 20px;
-        font-size: 3.2rem;
-    }
-    .skill-edu{
-        width: auto;
-    }
-}
 @media(max-width:768px){
     .soft_name{
         font-size: 3.8rem;
@@ -540,7 +525,7 @@ textarea{
    
 }
 .card-container{
-    display:list-item;
+  
     height: 15rem;
     gap: 20px;
 }
@@ -555,7 +540,24 @@ textarea{
 .card-container > div:hover{
     flex: 6;
 }
-
+@media(max-width:375px){
+     .soft_name{
+        font-size: 1.6rem;
+        padding-top: 20px;
+        letter-spacing: 1px;
+        
+    }
+    .dev_name{
+        margin-top: 20px;
+        font-size: 1.2rem;
+    }
+    .skill-edu{
+        width: auto;
+    }
+    .education-container{
+        width: 100px;
+    }
+}
 @media(min-width: 800px) and (max-width: 1366px) {
     .navbar-brand img {
         width: 50px;
