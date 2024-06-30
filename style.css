@@ -291,6 +291,7 @@ button:after {
 .hamburger-content h1 {
     
 }
+
 @media(max-width: 768px) {
     .search-bar {
         display: none;
